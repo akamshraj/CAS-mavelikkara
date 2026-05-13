@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}College Website{% endblock %}</title>
+<link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<header>
+    <h1 align="center">COLLEGE OF APPLIED SCIENCE MAVELIKKARA</h1>
+    <nav align="center">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/department/">Department</a>
+        <a href="/departmentdetails/">Departmentdetails</a>
+
+
+    </nav>
+</header>
+
+<div class="content">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<footer>
+    &copy; 2026 ABC College
+</footer>
+
+</body>
+</html>

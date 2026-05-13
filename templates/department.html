@@ -1,0 +1,25 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Department Page{% endblock %}
+
+{% block content %}
+<div class="overlay-box">
+<h1>Department List</h1>
+</div>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Details</th>
+    </tr>
+
+    {% for dept in departments %}
+    <tr>
+        <td>{{ dept.name }}</td>
+        <td>{{ dept.details|linebreaksbr }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}
